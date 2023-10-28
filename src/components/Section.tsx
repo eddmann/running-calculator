@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Root = styled.div`
   flex: 1;
 
-  @media (width >= 800px) {
+  @media (width >= 800px), (orientation: landscape) {
     max-width: 492px;
   }
 `;

@@ -15,7 +15,7 @@ import { Page } from '../../types';
 const Root = styled.div`
   padding: 5rem ${({ theme }) => theme.spacing.padding.m};
 
-  @media (width >= 800px) {
+  @media (width >= 800px), (orientation: landscape) {
     padding: 9rem max(${({ theme }) => theme.spacing.padding.m}, env(safe-area-inset-right)) env(safe-area-inset-bottom)
       max(${({ theme }) => theme.spacing.padding.m}, env(safe-area-inset-left));
   }
@@ -29,7 +29,7 @@ const PageLayout = styled.div`
   margin: auto;
   justify-content: center;
 
-  @media (width >= 800px) {
+  @media (width >= 800px), (orientation: landscape) {
     flex-direction: row;
   }
 `;

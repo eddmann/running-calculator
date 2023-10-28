@@ -21,7 +21,7 @@ const Root = styled.div`
   background-color: ${({ theme }) => theme.colors.navigationBackground};
   color: ${({ theme }) => theme.colors.navigationText};
 
-  @media (width >= 800px) {
+  @media (width >= 800px), (orientation: landscape) {
     inset: 50px 0 auto;
   }
 
@@ -52,7 +52,7 @@ const Item = styled.button<{ $isSelected: boolean }>`
     margin-bottom: ${({ theme }) => theme.spacing.padding.xs};
   }
 
-  @media (width >= 800px) {
+  @media (width >= 800px), (orientation: landscape) {
     flex-direction: row;
 
     span {
