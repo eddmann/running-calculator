@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useBodyLock } from '../hooks/useBodyLock';
+import useBodyLock from '../hooks/useBodyLock';
 
 const Input = styled.input`
   font-size: ${({ theme }) => theme.typography.size.l};

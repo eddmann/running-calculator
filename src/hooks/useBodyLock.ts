@@ -1,6 +1,6 @@
 import { useCallback, useLayoutEffect, useState } from 'react';
 
-export const useBodyLock = () => {
+const useBodyLock = () => {
   const [isLocked, setIsLocked] = useState(false);
 
   useLayoutEffect(() => {
@@ -18,9 +18,12 @@ export const useBodyLock = () => {
   const lock = useCallback(() => {
     setIsLocked(true);
   }, []);
+
   const unlock = useCallback(() => {
     setIsLocked(false);
   }, []);
 
   return { lock, unlock };
 };
+
+export default useBodyLock;

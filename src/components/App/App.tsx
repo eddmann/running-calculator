@@ -11,6 +11,7 @@ import TimeIcon from '../../assets/time.svg?react';
 import Navigation from './Navigation';
 import Header from './Header';
 import { Page } from '../../types';
+import PWAInstallBanner from '../PWAInstallBanner';
 
 const Root = styled.div`
   padding: 5rem ${({ theme }) => theme.spacing.padding.m};
@@ -70,6 +71,7 @@ function App() {
       <Header title="Running Calculator" />
       <PageLayout>{page.content}</PageLayout>
       <Navigation selected={page} pages={pages} onChange={setPage} />
+      <PWAInstallBanner />
     </Root>
   );
 }
