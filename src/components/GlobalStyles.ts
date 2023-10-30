@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
 
   * {
     user-select: none;
+    -webkit-user-select: none;
     -webkit-touch-callout: none;
   }
 
