@@ -103,7 +103,7 @@ Error generating stack: `+o.message+`
   padding: ${({theme:e})=>e.spacing.padding.s} 0;
   font-size: ${({theme:e})=>e.typography.size.l};
   color: ${({theme:e})=>e.colors.sectionTextLight};
-`,dh=()=>{const[e,t]=z.useState({value:{hours:"0",minutes:"4",seconds:"40"},unit:"per/km"}),[n,r]=z.useState({value:{hours:"0",minutes:"7",seconds:"30"},unit:"per/mile"}),i=o=>{t(rh(o)),r(nh(o))};return g.jsxs(Ar,{title:"Converter",children:[g.jsxs(za,{children:[g.jsx(rn,{time:e.value,onChange:o=>{i({...e,value:o})}}),g.jsx(La,{children:"per/km"})]}),g.jsx(fh,{children:"="}),g.jsxs(za,{children:[g.jsx(rn,{time:n.value,onChange:o=>{i({...n,value:o})}}),g.jsx(La,{children:"per/mile"})]})]})},md=j.select`
+`,dh=()=>{const[e,t]=z.useState({value:{hours:"0",minutes:"4",seconds:"40"},unit:"per/km"}),[n,r]=z.useState({value:{hours:"0",minutes:"7",seconds:"31"},unit:"per/mile"}),i=o=>{t(rh(o)),r(nh(o))};return g.jsxs(Ar,{title:"Converter",children:[g.jsxs(za,{children:[g.jsx(rn,{time:e.value,onChange:o=>{i({...e,value:o})}}),g.jsx(La,{children:"per/km"})]}),g.jsx(fh,{children:"="}),g.jsxs(za,{children:[g.jsx(rn,{time:n.value,onChange:o=>{i({...n,value:o})}}),g.jsx(La,{children:"per/mile"})]})]})},md=j.select`
   color: inherit;
   background-color: inherit;
   border: 2px solid ${({theme:e})=>e.colors.inputBorder};
@@ -352,7 +352,7 @@ Error generating stack: `+o.message+`
   }
 `,il=j.button`
   color: ${({$variant:e,theme:t})=>e==="primary"?t.colors.headerText:t.colors.inputText};
-  margin: 0;
+  margin: ${({$variant:e})=>e==="primary"?"0":"-0.5rem 0 0"};
   font-size: ${({theme:e})=>e.typography.size.m};
   background: ${({$variant:e,theme:t})=>e==="primary"?t.colors.headerBackground:t.colors.inputBackground};
   border: ${({$variant:e,theme:t})=>e==="primary"?"none":`2px solid ${t.colors.inputBorder}`};
@@ -386,6 +386,7 @@ Error generating stack: `+o.message+`
 
   * {
     user-select: none;
+    -webkit-user-select: none;
     -webkit-touch-callout: none;
   }
 
