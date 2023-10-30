@@ -76,7 +76,7 @@ const Sheet = styled.div<{ $isShown: boolean; $startX: string }>`
 
 const Action = styled.button<{ $variant: 'primary' | 'secondary' }>`
   color: ${({ $variant, theme }) => ($variant === 'primary' ? theme.colors.headerText : theme.colors.inputText)};
-  margin: 0;
+  margin: ${({ $variant }) => ($variant === 'primary' ? '0' : '-0.5rem 0 0')};
   font-size: ${({ theme }) => theme.typography.size.m};
   background: ${({ $variant, theme }) =>
     $variant === 'primary' ? theme.colors.headerBackground : theme.colors.inputBackground};
