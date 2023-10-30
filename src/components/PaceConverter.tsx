@@ -29,7 +29,7 @@ const PaceConverter = () => {
     unit: 'per/km',
   });
   const [miles, setMiles] = useState<Pace>({
-    value: { hours: '0', minutes: '7', seconds: '30' },
+    value: { hours: '0', minutes: '7', seconds: '31' },
     unit: 'per/mile',
   });
 
