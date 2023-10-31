@@ -6,8 +6,9 @@ import ShareIcon from '../assets/install-share.svg?react';
 import HomeScreenIcon from '../assets/install-home-screen.svg?react';
 import useOnClickOutside from '../hooks/useOnClickOutside';
 
-const ANIMATION_DURATION = '250ms';
-const ANIMATION_DELAY = '125ms';
+const ENTRY_ANIMATION_DURATION = '250ms';
+const ENTRY_ANIMATION_DELAY = '125ms';
+const ACTION_ANIMATION_DURATION = '250ms';
 
 const Overlay = styled.div<{ $isOpen: boolean }>`
   position: fixed;
@@ -16,7 +17,8 @@ const Overlay = styled.div<{ $isOpen: boolean }>`
   background: ${({ $isOpen }) => ($isOpen ? 'rgba(0, 0, 0, 50%)' : 'rgba(0, 0, 0, 0%)')};
   backdrop-filter: ${({ $isOpen }) => ($isOpen ? 'blur(3px)' : 'blur(0px)')};
   -webkit-backdrop-filter: ${({ $isOpen }) => ($isOpen ? 'blur(3px)' : 'blur(0px)')};
-  transition: ${({ $isOpen }) => ($isOpen ? ANIMATION_DURATION : `${ANIMATION_DURATION} ${ANIMATION_DELAY}`)};
+  transition: ${({ $isOpen }) =>
+    $isOpen ? ENTRY_ANIMATION_DURATION : `${ENTRY_ANIMATION_DURATION} ${ENTRY_ANIMATION_DELAY}`};
   touch-action: none;
 
   @media (width >= 800px), (orientation: landscape) {
@@ -35,7 +37,8 @@ const Modal = styled.div<{ $isOpen: boolean }>`
   inset: auto 0 0;
   max-width: 500px;
   transform: ${({ $isOpen }) => ($isOpen ? 'translateY(0)' : 'translateY(100%)')};
-  transition: ${({ $isOpen }) => ($isOpen ? `${ANIMATION_DURATION} ${ANIMATION_DELAY}` : ANIMATION_DURATION)};
+  transition: ${({ $isOpen }) =>
+    $isOpen ? `${ENTRY_ANIMATION_DURATION} ${ENTRY_ANIMATION_DELAY}` : ENTRY_ANIMATION_DURATION};
 
   @media (width >= 800px), (orientation: landscape) {
     border: 1px solid ${({ theme }) => theme.colors.inputBorder};
@@ -50,11 +53,12 @@ const Sheet = styled.div<{ $isShown: boolean; $startX: string }>`
   padding: ${({ $isShown, theme }) => ($isShown ? theme.spacing.padding.m : '0')};
   max-height: ${({ $isShown }) => ($isShown ? '' : '0')};
   transform: translateX(${({ $isShown, $startX }) => ($isShown ? '0' : $startX)});
-  transition: transform ${ANIMATION_DURATION};
+  transition: transform ${ENTRY_ANIMATION_DURATION};
 
   h3 {
     margin: 0;
     padding: 0;
+    line-height: 1rem;
     font-size: ${({ theme }) => theme.typography.size.l};
     font-weight: ${({ theme }) => theme.typography.weight.extrabold};
   }
@@ -76,7 +80,7 @@ const Sheet = styled.div<{ $isShown: boolean; $startX: string }>`
 
 const Action = styled.button<{ $variant: 'primary' | 'secondary' }>`
   color: ${({ $variant, theme }) => ($variant === 'primary' ? theme.colors.headerText : theme.colors.inputText)};
-  margin: ${({ $variant }) => ($variant === 'primary' ? '0' : '-0.5rem 0 0')};
+  margin: ${({ $variant }) => ($variant === 'primary' ? '0 0 -0.5rem' : '0')};
   font-size: ${({ theme }) => theme.typography.size.m};
   background: ${({ $variant, theme }) =>
     $variant === 'primary' ? theme.colors.headerBackground : theme.colors.inputBackground};
@@ -86,6 +90,11 @@ const Action = styled.button<{ $variant: 'primary' | 'secondary' }>`
   cursor: pointer;
   outline: inherit;
   -webkit-tap-highlight-color: transparent;
+  transition: transform ${ACTION_ANIMATION_DURATION};
+
+  &:active {
+    transform: scale(0.98);
+  }
 `;
 
 const PWAInstallBanner = () => {
