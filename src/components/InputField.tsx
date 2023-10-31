@@ -13,6 +13,7 @@ const Input = styled.input`
   padding: ${({ theme }) => theme.spacing.padding.xs} 0;
   letter-spacing: 0.05em;
   transition: background 250ms;
+  -webkit-tap-highlight-color: transparent;
 
   &:focus {
     border-bottom: 2px solid ${({ theme }) => theme.colors.inputBorderDark};
