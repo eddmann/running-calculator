@@ -78,7 +78,6 @@ const TimeInput = ({ time, onChange }: Props) => {
       <StyledInputField
         type="text"
         inputMode="numeric"
-        pattern="[0-9]*"
         value={time.hours}
         onChange={handleChange('hours')}
         onBlur={handleBlur('hours')}
@@ -87,7 +86,6 @@ const TimeInput = ({ time, onChange }: Props) => {
       <StyledInputField
         type="text"
         inputMode="numeric"
-        pattern="[0-9]*"
         value={time.minutes}
         onChange={handleChange('minutes')}
         onBlur={handleBlur('minutes')}
@@ -96,7 +94,6 @@ const TimeInput = ({ time, onChange }: Props) => {
       <StyledInputField
         type="text"
         inputMode="numeric"
-        pattern="[0-9]*"
         value={time.seconds}
         onChange={handleChange('seconds')}
         onBlur={handleBlur('seconds')}
