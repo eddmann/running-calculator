@@ -1,4 +1,4 @@
-<p align="center"><a href="https://eddmann.com/running-calculator/"><img src="public/app-icon.png" style="border-radius:30px;max-width:200px;" /></a></p>
+<p align="center"><a href="https://eddmann.com/running-calculator/"><img src="public/app-icon.png" width="200px" /></a></p>
 
 # Running Calculator
 
@@ -17,8 +17,8 @@ The application has been built using the following technologies:
 
 ### Mobile
 
-<img src="public/screenshots/ios-pace.png" style="max-width:200px;border-radius:10px;" /> <img src="public/screenshots/ios-distance.png" style="max-width:200px;border-radius:10px;" /> <img src="public/screenshots/ios-time.png" style="max-width:200px;border-radius:10px;" />
+<img src="public/screenshots/ios-pace.png" width="200px" /> <img src="public/screenshots/ios-distance.png"  width="200px" /> <img src="public/screenshots/ios-time.png" width="200px" />
 
 ### Desktop
 
-<img src="public/screenshots/desktop-wide-pace.png" style="max-width:500px"> <img src="public/screenshots/desktop-narrow-pace.png" style="max-width:200px">
+<img src="public/screenshots/desktop-wide-pace.png" width="450px"> <img src="public/screenshots/desktop-narrow-pace.png" width="200px">
