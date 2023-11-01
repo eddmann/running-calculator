@@ -15,9 +15,13 @@ The application has been built using the following technologies:
 
 ## Usage
 
-### Mobile
+### iOS
 
 <img src="public/screenshots/ios-pace.png" width="200px" /> <img src="public/screenshots/ios-distance.png"  width="200px" /> <img src="public/screenshots/ios-time.png" width="200px" />
+
+### Android
+
+<img src="public/screenshots/android-pace.png" width="200px" /> <img src="public/screenshots/android-distance.png"  width="200px" /> <img src="public/screenshots/android-time.png" width="200px" />
 
 ### Desktop
 
