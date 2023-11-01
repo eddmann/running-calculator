@@ -42,7 +42,7 @@ export const calcPaceInMiles = (distance: Distance, time: Time): Pace | null => 
   const pace =
     distance.unit === 'miles'
       ? timeToSeconds(time) / +distance.value
-      : timeToSeconds(time) / (+distance.value * KM_IN_MILE);
+      : timeToSeconds(time) / (+distance.value * MILE_IN_KM);
 
   if (isInvalid(pace)) {
     return null;
@@ -58,7 +58,7 @@ export const calcPaceInKm = (distance: Distance, time: Time): Pace | null => {
   const pace =
     distance.unit === 'km'
       ? timeToSeconds(time) / +distance.value
-      : timeToSeconds(time) / (+distance.value / MILE_IN_KM);
+      : timeToSeconds(time) / (+distance.value * KM_IN_MILE);
 
   if (isInvalid(pace)) {
     return null;
@@ -96,7 +96,7 @@ export const calcDistanceInMiles = (pace: Pace, time: Time): Distance | null => 
   const distance =
     pace.unit === 'per/mile'
       ? timeToSeconds(time) / timeToSeconds(pace.value)
-      : timeToSeconds(time) / (timeToSeconds(pace.value) / KM_IN_MILE);
+      : timeToSeconds(time) / (timeToSeconds(pace.value) * KM_IN_MILE);
 
   if (isInvalid(distance)) {
     return null;
