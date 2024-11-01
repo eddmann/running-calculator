@@ -1,4 +1,4 @@
-<p align="center"><a href="https://eddmann.com/running-calculator/"><img src="public/app-icon.png" width="200px" /></a></p>
+<p align="center"><a href="https://running-calculator.eddmann.com/"><img src="public/app-icon.png" width="200px" /></a></p>
 
 # Running Calculator
 
