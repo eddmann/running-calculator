@@ -4,6 +4,8 @@
 
 _The calculator swiss-army knife for runners_
 
+<a href="https://apps.apple.com/gb/app/the-running-calculator/id6737702294"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" /></a>
+
 Progress Web Application (PWA) which provides you with the ability to calculate running pace, time and distance, along with common-place imperial/metric measurement conversion.
 
 The application has been built using the following technologies:
