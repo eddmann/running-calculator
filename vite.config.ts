@@ -21,6 +21,7 @@ export default defineConfig({
         short_name: 'Run Calculator',
         description: 'The calculator swiss-army knife for runners',
         theme_color: '#104547',
+        background_color: '#104547',
         display: 'standalone',
         orientation: 'portrait',
         lang: 'en',
