@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.eddmann.running_calculator",
+        "sha256_cert_fingerprints": ["67:69:47:65:89:93:63:60:D1:C5:15:88:3D:20:73:56:A7:FD:8E:2D:02:C3:F7:00:52:F0:DC:D2:F3:1A:13:E5"]
+      }
+    }]
